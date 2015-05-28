@@ -18,7 +18,7 @@ angular.module('featherWeatherApp')
     return {
       isDoorOpen: function () {
         //TODO: this is dumb, it's just so the UI is more interesting
-        isDoorOpen = !isDoorOpen;
+        isDoorOpen = Math.random() < 0.5;
         return isDoorOpen;
       }
     };
