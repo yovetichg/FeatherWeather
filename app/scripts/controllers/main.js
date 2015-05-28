@@ -8,7 +8,7 @@
  * Controller of the featherWeatherApp
  */
 angular.module('featherWeatherApp')
-  .controller('MainCtrl', function ($scope, forecastIOService, coopDoorService) {
+  .controller('MainCtrl', function ($scope, forecastIOService) {
     $scope.getForecast = function(){
     	var promise = forecastIOService.getCurrentForecast();
     	promise.then(
@@ -20,10 +20,5 @@ angular.module('featherWeatherApp')
     		function(errorPayload){
     			console.log('error');
     		});
-    }
-
-    $scope.checkDoorStatus = function(){
-    	var isDoorOpen = coopDoorService.isDoorOpen();
-    	$scope.isDoorOpen = isDoorOpen;
     }
   });

@@ -35,12 +35,11 @@
             <a class="navbar-brand" href="#/">featherWeather</a>
           </div>
 
-          <div class="collapse navbar-collapse" id="js-navbar-collapse">
+          <div class="collapse navbar-collapse" id="js-navbar-collapse" ng-controller="NavCtrl">
 
             <ul class="nav navbar-nav">
-              <li class="active"><a href="#/">Home</a></li>
-              <li><a ng-href="#/about">About</a></li>
-              <li><a ng-href="#/">Contact</a></li>
+              <li ng-class="{active: isActive('/')}"><a href="#/">Weather</a></li>
+              <li ng-class="{active: isActive('/coop')}"><a ng-href="#/coop">Coop Conditions</a></li>
             </ul>
           </div>
         </div>
@@ -89,6 +88,7 @@
         <script src="scripts/controllers/about.js"></script>
         <script src="scripts/services/forecastioservice.js"></script>
         <script src="scripts/services/coopdoorservice.js"></script>
+        <script src="scripts/controllers/nav.js"></script>
         <!-- endbuild -->
 </body>
 </html>

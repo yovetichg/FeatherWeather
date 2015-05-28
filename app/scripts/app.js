@@ -23,7 +23,7 @@ angular
         templateUrl: 'views/main.html',
         controller: 'MainCtrl'
       })
-      .when('/about', {
+      .when('/coop', {
         templateUrl: 'views/about.html',
         controller: 'AboutCtrl'
       })

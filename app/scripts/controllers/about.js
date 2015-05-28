@@ -8,10 +8,10 @@
  * Controller of the featherWeatherApp
  */
 angular.module('featherWeatherApp')
-  .controller('AboutCtrl', function ($scope) {
-    $scope.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
+  .controller('AboutCtrl', function ($scope, coopDoorService) {
+    
+    $scope.checkDoorStatus = function(){
+    	var isDoorOpen = coopDoorService.isDoorOpen();
+    	$scope.isDoorOpen = isDoorOpen;
+    }
   });
